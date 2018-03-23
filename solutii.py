@@ -28,11 +28,6 @@ print(balancedSum([1, 2, 3, 3]))
 #####################################
 
 
-def computeOutcome(option):
-    # Calculam suma numerelor selectate
-    items = [i[0]*i[1] for i in option]
-    return sum(items)
-
 
 def maximizeRatings(ratings):
 
@@ -51,6 +46,14 @@ def maximizeRatings(ratings):
     # acum combin array-ul de intrare cu toate optiunile valide ramase
     # urmeaza sa folosesc fiecare optiune ca o masca pentru array-ul de intrare
     options = [zip(combo, ratings) for combo in combos]
+
+    # pentru claritate
+    # separam sumarea termenilor intr-o
+    # functie separata
+    def computeOutcome(option):
+        # Calculam suma numerelor selectate
+        items = [i[0]*i[1] for i in option]
+        return sum(items)
 
     # calculam sumele generate de toate optiunile valide
     outcomes = [computeOutcome(option) for option in options]
