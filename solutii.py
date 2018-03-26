@@ -1,6 +1,3 @@
-from __future__ import print_function
-import itertools
-
 #####################################
 # Problema 1
 # ==================================
@@ -30,6 +27,8 @@ print(balancedSum([1, 2, 3, 3]))
 
 
 def maximizeRatings(ratings):
+
+    import itertools
 
     # generez toate posibilele combinatii de selectii pentru lungimea lui ratings
     # ex: "0100100" ....
